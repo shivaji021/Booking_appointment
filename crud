@@ -1,0 +1,14 @@
+const axios = require('axios'); // Include this line if you're in a Node.js environment
+
+const apiEndpoint = 'https://crudcrud.com/api/YOUR_UNIQUE_ENDPOINT'; // Replace with your unique endpoint
+const objectToStore = {
+  // ... Your object here
+};
+
+axios.post(`${apiEndpoint}/appointments`, objectToStore)
+  .then(response => {
+    console.log('Data posted successfully:', response.data);
+  })
+  .catch(error => {
+    console.error('There was an error posting the data:', error);
+  });
